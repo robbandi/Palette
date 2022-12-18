@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "color": "^4.2.3",
+    "framer-motion": "^7.10.2",
     "next": "13.0.7",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-spring": "^9.6.1"
   },
   "devDependencies": {
     "eslint": "8.30.0",
