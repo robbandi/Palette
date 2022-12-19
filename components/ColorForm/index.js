@@ -20,15 +20,17 @@ export default function ColorForm({ onColorChange }) {
   }
 
   return (
+    <div>
     <div className={styles.wrapper}>
       <div className={styles.nav}>
     <form onSubmit={handleSubmit}>
       <input className={styles.input} type="color" value={color} onChange={handleChange} />
       <input className={styles.input} type="text" placeholder='#000' pattern="#[0-9a-f]{3,6}" value={color} onChange={handleChange} />
       <button className={styles.input} type="submit">Enter</button>
-      {error && <p>{error}</p>}
     </form>
     </div>
+    </div>
+    {error && <span className={styles.error}>{error}</span>}
     </div>
   )
 }

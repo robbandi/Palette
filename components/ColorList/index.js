@@ -10,6 +10,10 @@ export default function ColorList({ colorSchemes }) {
     config: { mass: 1, tension: 280, friction: 20 },
   })
 
+  const handleColorBoxClick = (hexCode) => {
+    navigator.clipboard.writeText(hexCode)
+  }
+
   return (
     <div className={styles.colorlist}>
       {Object.keys(colorSchemes).map((key) => (
@@ -22,6 +26,7 @@ export default function ColorList({ colorSchemes }) {
                 className={styles.colorframe}
                 onMouseEnter={() => setIsExpanded(true)}
                 onMouseLeave={() => setIsExpanded(false)}
+                onClick={() => handleColorBoxClick(color)}
               >
                 <animated.div
                   className={styles.colorbox}

@@ -44,6 +44,22 @@
     margin-top: 0.5rem;
     /* padding-right: 1rem; */
    }
+
+   .error {
+    word-break: break-all;
+    font-weight: 500;
+    /* margin-top: 5rem; */
+    z-index: 999;
+    display: block;
+    margin: 0 auto;
+    /* display: flex; */
+    /* position: relative; */
+      padding: 0.35rem 0.55rem;
+      border-radius: 0.5rem;
+      background-color: #251111;
+      color: #e54c4c;
+      width: fit-content;
+  }
    
        .wrapper {
         width: fit-content;
