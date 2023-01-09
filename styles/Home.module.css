@@ -127,6 +127,100 @@ font-size: 0.95rem;
   align-items: center;
 }
 
+.plugin:hover {
+  text-decoration: rgb(107, 107, 107) underline;
+}
+
+.plugin {
+  font-weight: 600;
+  
+}
+
+.pluginColours {
+  text-decoration: none;
+  word-spacing: 2rem;
+  /* font-size: 1; */
+  /* filter: saturate(1); */
+}
+
+.pluginColours span:nth-child(1) {
+background: linear-gradient(10deg, #E05A33 0%, #ff9f81 100%);
+    /* background: linear-gradient(10deg, #828dca 0%, #959bd0 100%); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.pluginColours span:nth-child(2) {
+  background: linear-gradient(10deg, #EE7A69 0%, #ff9f81 100%);
+    /* background: linear-gradient(10deg, #828dca 0%, #959bd0 100%); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .pluginColours span:nth-child(3) {
+    color: #985DF6;
+    background: linear-gradient(10deg, #985DF6 0%, #c6a3ff 100%);
+    /* background: linear-gradient(10deg, #828dca 0%, #959bd0 100%); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    }
+
+    .pluginColours span:nth-child(4) {
+      color: #58B9F8;
+      background: linear-gradient(10deg, #58B9F8 0%, #a1daff 100%);
+      /* background: linear-gradient(10deg, #828dca 0%, #959bd0 100%); */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      }
+
+      .pluginColours span:nth-child(5) {
+        color: #5FCC89;
+        background: linear-gradient(10deg, #5FCC89 0%, #aeffcd 100%);
+        /* background: linear-gradient(10deg, #828dca 0%, #959bd0 100%); */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        }
+
+@media (max-width: 768px) {
+  .notice {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /* width: 100%; */
+    position: absolute;
+    /* transform: translateY(350%); */
+    /* transform: translateX(50%); */
+    color: rgb(71, 71, 71);
+    bottom: 0;
+    word-wrap: break-word;
+    font-size: 2.5rem;
+  }
+}
+
+.notice {
+  display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /* width: 100%; */
+    position: absolute;
+    /* transform: translateX(50%); */
+    left: 0;
+    color: rgb(71, 71, 71);
+    bottom: 5rem;
+    word-wrap: break-word;
+    font-size: 2.5rem;
+}
+
 .pass:nth-child(3), .pass:nth-child(2) {
   opacity: 1;
   /* filter: saturate(50); */

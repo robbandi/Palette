@@ -11,11 +11,14 @@ import Link from 'next/link'
 export default function Index() {
   const [color, setColor] = useState(null)
   const [colorSchemes, setColorSchemes] = useState(null)
+  const [showPopup, setShowPopup] = useState(true);
   const animation = useAnimation()
 
   const handleColorChange = (color) => {
     setColor(color)
     setColorSchemes(generateColorSchemes(color))
+    setShowPopup(false);
+
     animation.start({
       opacity: 1,
       x: 0,
@@ -39,6 +42,16 @@ export default function Index() {
         <motion.div animate={animation} initial={{ opacity: 0 }}>
           <ColorList colorSchemes={colorSchemes} />
         </motion.div>
+      )}
+          {showPopup && (
+        <div className={styles.notice}><span style={{fontWeight: '400'}}><span style={{fontWeight: '600'}}>Select a colour to get started</span> available as a <Link href='https://www.figma.com/community/plugin/1187145852338445319/Palette'><span className={styles.plugin}>
+          <span className={styles.pluginColours}>
+          <span>F</span>
+          <span>i</span>
+          <span>g</span>
+          <span>m</span>
+          <span>a</span> 
+          </span> plugin →</span></Link></span></div>
       )}
       </main>
 
