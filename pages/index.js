@@ -44,7 +44,7 @@ export default function Index() {
         </motion.div>
       )}
           {showPopup && (
-        <div className={styles.notice}><span style={{fontWeight: '400'}}><span style={{fontWeight: '600'}}>Select a colour to get started</span> available as a <Link href='https://www.figma.com/community/plugin/1187145852338445319/Palette'><span className={styles.plugin}>
+        <div className={styles.notice}><span style={{fontWeight: '400'}}><span style={{fontWeight: '600'}}>Select a colour to get started</span> also available as a <Link href='https://www.figma.com/community/plugin/1187145852338445319/Palette'><span className={styles.plugin}>
           <span className={styles.pluginColours}>
           <span>F</span>
           <span>i</span>
