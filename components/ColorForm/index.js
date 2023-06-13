@@ -11,13 +11,15 @@ export default function ColorForm({ onColorChange }) {
   }
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    if (color.match(/^#([0-9a-f]{3}){1,2}$/i)) {
-      onColorChange(color)
+    event.preventDefault();
+    const normalizedColor = color.toLowerCase();
+    if (normalizedColor.match(/^#([0-9a-f]{3}){1,2}$/i)) {
+      onColorChange(normalizedColor);
     } else {
-      setError('Invalid color')
+      setError('Invalid color');
     }
-  }
+  };
+  
 
   return (
     <div>
