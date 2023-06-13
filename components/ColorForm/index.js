@@ -22,9 +22,6 @@ export default function ColorForm({ onColorChange }) {
       setError('Invalid color');
     }
   }
-  
-
-  
 
   return (
     <div>

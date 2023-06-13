@@ -1,18 +1,24 @@
-import React, { useState } from 'react'
-import { useSpring, animated } from 'react-spring'
-import styles from '../ColorList/styles.module.css'
+import React, { useState } from 'react';
+import { useSpring, animated } from 'react-spring';
+import styles from '../ColorList/styles.module.css';
+import 'vercel-toast/css'
+import { createToast } from 'vercel-toast'
 
 export default function ColorList({ colorSchemes }) {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const springProps = useSpring({
     transform: isExpanded ? 'scale(1)' : 'scale(1)',
     config: { mass: 1, tension: 280, friction: 20 },
-  })
+  });
 
   const handleColorBoxClick = (hexCode) => {
-    navigator.clipboard.writeText(hexCode)
-  }
+    navigator.clipboard.writeText(hexCode);
+    createToast('Copied: ' + hexCode, {
+      timeout: 3000, // in 3 seconds the toast will be removed automatically
+      type: "dark", // default
+    })// Display the toast with the copied text
+  };
 
   return (
     <div className={styles.colorlist}>
@@ -39,5 +45,5 @@ export default function ColorList({ colorSchemes }) {
         </div>
       ))}
     </div>
-  )
+  );
 }

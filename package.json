@@ -15,7 +15,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-spring": "^9.6.1",
-    "react-toastify": "^9.1.1"
+    "react-toastify": "^9.1.1",
+    "vercel-toast": "^1.7.1"
   },
   "devDependencies": {
     "eslint": "8.30.0",
