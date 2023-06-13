@@ -12,13 +12,18 @@ export default function ColorForm({ onColorChange }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const normalizedColor = color.toLowerCase();
-    if (normalizedColor.match(/^#([0-9a-f]{3}){1,2}$/i)) {
-      onColorChange(normalizedColor);
+    const formattedColor = color.trim();
+    const colorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i;
+  
+    if (colorRegex.test(formattedColor)) {
+      onColorChange(formattedColor);
+      setError(null);
     } else {
       setError('Invalid color');
     }
-  };
+  }
+  
+
   
 
   return (
@@ -27,7 +32,14 @@ export default function ColorForm({ onColorChange }) {
       <div className={styles.nav}>
     <form onSubmit={handleSubmit}>
       <input className={styles.input} type="color" value={color} onChange={handleChange} />
-      <input className={styles.input} type="text" placeholder='#000' pattern="#[0-9a-f]{3,6}" value={color} onChange={handleChange} />
+      <input
+  className={styles.input}
+  type="text"
+  placeholder="#000"
+  pattern="#[0-9a-fA-F]{3,6}"
+  value={color}
+  onChange={handleChange}
+/>
       <button className={styles.input} type="submit">Enter</button>
     </form>
     </div>

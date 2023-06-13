@@ -17,13 +17,14 @@ export default function Index() {
   const handleColorChange = (color) => {
     setColor(color)
     setColorSchemes(generateColorSchemes(color))
-    setShowPopup(false);
-
+  
     animation.start({
       opacity: 1,
       x: 0,
       transition: { duration: 0.5 },
     })
+  
+    setShowPopup(false)
   }
 
   return (
@@ -39,7 +40,7 @@ export default function Index() {
     <main className={styles.main}>
     <ColorForm onColorChange={handleColorChange} />
       {colorSchemes && (
-        <motion.div animate={animation} initial={{ opacity: 0 }}>
+        <motion.div animate={animation}>
           <ColorList colorSchemes={colorSchemes} />
         </motion.div>
       )}

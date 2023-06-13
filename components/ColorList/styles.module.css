@@ -54,7 +54,7 @@
   flex-direction: column;
   align-items: center;
   width: 150px;
-  height: 150px;
+  height: 170px;
 }
 
 @media (max-width: 600px) {
@@ -64,7 +64,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 150px;
+  height: 170px;
 }
 }
 
@@ -75,6 +75,7 @@
 }
 
 .colorbox {
+  border-radius: 1.25rem;
   width: 100%;
   height: 100%;
 }

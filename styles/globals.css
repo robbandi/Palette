@@ -10,7 +10,7 @@ input {
 }
 
 ::selection {
-  display: none;
+  /* display: none; */
 }
 
 a {
